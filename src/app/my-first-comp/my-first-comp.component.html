@@ -1,0 +1,28 @@
+<div class="form-container">
+  <h2>SIMPLE FORM</h2>
+  <form (ngSubmit)="onSumbit()">
+    <div class="form-group">
+      <label for="name">NAME:</label>
+      <input type="text" id="name" [(ngModel)]="name" name="name" required>
+    </div>
+    <div class="from-group">
+      <label for="email">EMAIL:</label>
+      <input type="text" id="email" [(ngModel)]="email" name="email" required autocomplete="email" aria-required="true" aria-invalid="true" />
+    </div>
+    <span>Please provide a valid email format (example@domain.com)</span>
+    <div class="from-group">
+      <label for="email">MESSAGE:</label>
+      <input type="text" placeholder="Search" id="message" [(ngModel)]="message" name="message" required>
+    </div>
+    <button type="submit">SUMBIT</button>
+  </form>
+
+<div class="flex-container" *ngIf="isSumbitted">
+  <app-message-detail *ngFor="let mgs of messages;let i =index" 
+   [message]="mgs"
+   [index]="i"
+   (delete)="deleteMessage($event)" 
+   ></app-message-detail>
+  
+</div>
+</div>

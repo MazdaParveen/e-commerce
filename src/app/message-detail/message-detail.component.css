@@ -1,0 +1,22 @@
+.message-card{
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1pz solid red;
+    background-color: rgb(54, 100, 100);
+    border-radius: 4px;
+
+}
+.message-header{
+    background-color: rgb(46, 68, 88);
+    color: rgb(146, 146, 180);
+    padding: 10px;
+    border-radius: 4px 4px 0 0;
+}
+.message-content{
+    padding: 10px;
+    border-radius: 0 0 4px 4px;
+}
+div {
+    word-wrap: break-word;
+  }
